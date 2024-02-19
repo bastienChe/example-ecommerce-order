@@ -8,4 +8,7 @@ public record OrderProductDTO(int id, String name, int quantity) {
         return new OrderProduct(orderProductDTO.id(), orderProductDTO.name(), orderProductDTO.quantity());
     }
 
+    public static OrderProductDTO from(OrderProduct orderProduct) {
+        return new OrderProductDTO(orderProduct.getId(), orderProduct.getName(), orderProduct.getQuantity());
+    }
 }
